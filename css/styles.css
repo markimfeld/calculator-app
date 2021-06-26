@@ -1,5 +1,4 @@
-:root {
-  /* THEME 1 */
+.default-theme {
   --main-background: hsl(222, 26%, 31%);
   --toggle-keypad-background: hsl(223, 31%, 20%);
   --screen-background: hsl(224, 36%, 15%);
@@ -17,8 +16,9 @@
   --shadow-danger: hsl(6, 70%, 34%);
   --shadow-orange: hsl(28, 16%, 65%);
 
-  /* THEME 2 */
-  /*
+}
+
+.second-theme {
   --main-background: hsl(0, 0%, 90%);
   --toggle-keypad-background: hsl(0, 5%, 81%);
   --screen-background: hsl(0, 0%, 93%);
@@ -35,9 +35,9 @@
   --shadow-secondary: hsl(185, 58%, 25%);
   --shadow-danger: hsl(25, 99%, 27%);
   --shadow-orange: hsl(35, 11%, 61%);*/
+}
 
-  /* THEME 3 */
-  /*
+.third-theme {
   --main-background: hsl(268, 75%, 9%);
   --toggle-keypad-background: hsl(268, 71%, 12%);
   --screen-background: hsl(268, 71%, 12%);
@@ -53,19 +53,28 @@
 
   --shadow-secondary: hsl(285, 91%, 52%);
   --shadow-danger: hsl(177, 92%, 70%);
-  --shadow-orange: hsl(290, 70%, 36%);*/
+  --shadow-orange: hsl(290, 70%, 36%);
 }
 
 * {
   font-family: "Spartan", sans-serif;
   margin: 0;
   padding: 0;
+  transition: all 200ms;
+  overflow: hidden;
 }
 
 .container {
   height: 100vh;
   padding: 1.5rem;
   background-color: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  width: 23rem;
 }
 
 header {
@@ -84,7 +93,7 @@ header {
   color: var(--text-header);
   font-size: 0.8rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 35%;
 }
 
@@ -104,7 +113,7 @@ header {
 .positions {
   font-size: 0.6rem;
   letter-spacing: 0.3rem;
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
   margin-bottom: 0.2rem;
 }
 
@@ -120,7 +129,14 @@ header {
   height: 1rem;
   border-radius: 50%;
   display: block;
+}
+
+.btn-toggle-left {
   transform: translate(-1rem);
+}
+
+.btn-toggle-right {
+  transform: translate(1rem);
 }
 
 .display {
