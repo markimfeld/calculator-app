@@ -4,6 +4,15 @@
   --screen-background: hsl(224, 36%, 15%);
 
   --text: hsl(0, 0%, 100%);
+  --text-secondary: hsl(221, 14%, 31%);
+
+  --button-background: hsl(225, 21%, 49%);
+  --button-danger-bg: hsl(6, 63%, 50%);
+  --button-orange-bg: hsl(30, 25%, 89%);
+
+  --shadow-secondary: hsl(224, 28%, 35%);
+  --shadow-danger: hsl(6, 70%, 34%);
+  --shadow-orange: hsl(28, 16%, 65%);
 }
 
 * {
@@ -20,8 +29,8 @@
 header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.4rem;
+  padding: 1rem 0rem;
 }
 
 .app-name {
@@ -33,17 +42,103 @@ header {
   color: var(--text);
   font-size: 0.8rem;
   display: flex;
-  justify-content: space-between;
-  border: 1px solid pink;
-  width: 30%;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.switcher-title {
+  align-self: flex-end;
+  font-size: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.positions {
+  font-size: 0.6rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.toggle {
+  background-color: var(--toggle-keypad-background);
+  padding: 0.2rem 0.9rem;
+  border-radius: 0.7rem;
 }
 
 .display {
   background-color: var(--screen-background);
-  padding: 2.2rem 1.1rem;
+  padding: 1.3rem 1.1rem;
   color: var(--text);
+  font-size: 2rem;
   text-align: end;
+  border-radius: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.numeric-panel {
+  background-color: var(--toggle-keypad-background);
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.btn {
+  width: 4rem;
+  height: 4rem;
+  border: none;
   border-radius: 5px;
+  background-color: var(--button-orange-bg);
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  border-bottom: 0.3rem solid var(--shadow-orange);
+}
+
+.btn-big {
+  width: 90%;
+  height: 4rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.btn-big:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.btn-big:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.btn-secondary {
+  background-color: var(--button-background);
+  color: var(--text);
+  border-bottom: 0.3rem solid var(--shadow-secondary);
+}
+
+.btn-danger {
+  background-color: var(--button-danger-bg);
+  color: var(--text);
+  border-bottom: 0.3rem solid var(--shadow-danger);
 }
 
 .default-theme {
