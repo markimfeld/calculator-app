@@ -1,10 +1,13 @@
 :root {
+  /* THEME 1 */
   --main-background: hsl(222, 26%, 31%);
   --toggle-keypad-background: hsl(223, 31%, 20%);
   --screen-background: hsl(224, 36%, 15%);
 
-  --text: hsl(0, 0%, 100%);
-  --text-secondary: hsl(221, 14%, 31%);
+  --text-header: hsl(0, 0%, 100%);
+  --text-main-btn: hsl(221, 14%, 31%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-equal-btn: hsl(0, 0%, 100%);
 
   --button-background: hsl(225, 21%, 49%);
   --button-danger-bg: hsl(6, 63%, 50%);
@@ -13,6 +16,44 @@
   --shadow-secondary: hsl(224, 28%, 35%);
   --shadow-danger: hsl(6, 70%, 34%);
   --shadow-orange: hsl(28, 16%, 65%);
+
+  /* THEME 2 */
+  /*
+  --main-background: hsl(0, 0%, 90%);
+  --toggle-keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --text-header: hsl(60, 10%, 19%);
+  --text-main-btn: hsl(198, 20%, 13%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-equal-btn: hsl(0, 0%, 100%);
+
+  --button-background: hsl(185, 42%, 37%);
+  --button-danger-bg: hsl(25, 98%, 40%);
+  --button-orange-bg: hsl(45, 7%, 89%);
+
+  --shadow-secondary: hsl(185, 58%, 25%);
+  --shadow-danger: hsl(25, 99%, 27%);
+  --shadow-orange: hsl(35, 11%, 61%);*/
+
+  /* THEME 3 */
+  /*
+  --main-background: hsl(268, 75%, 9%);
+  --toggle-keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --text-header: hsl(52, 100%, 62%);
+  --text-main-btn: hsl(52, 100%, 62%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-equal-btn: hsl(198, 20%, 13%);
+
+  --button-background: hsl(281, 89%, 26%);
+  --button-danger-bg: hsl(176, 100%, 44%);
+  --button-orange-bg: hsl(268, 47%, 21%);
+
+  --shadow-secondary: hsl(285, 91%, 52%);
+  --shadow-danger: hsl(177, 92%, 70%);
+  --shadow-orange: hsl(290, 70%, 36%);*/
 }
 
 * {
@@ -24,6 +65,7 @@
 .container {
   height: 100vh;
   padding: 1.5rem;
+  background-color: var(--main-background);
 }
 
 header {
@@ -34,12 +76,12 @@ header {
 }
 
 .app-name {
-  color: var(--text);
+  color: var(--text-header);
   font-size: 32px;
 }
 
 .switcher-container {
-  color: var(--text);
+  color: var(--text-header);
   font-size: 0.8rem;
   display: flex;
   justify-content: space-around;
@@ -62,19 +104,29 @@ header {
 .positions {
   font-size: 0.6rem;
   letter-spacing: 0.3rem;
+  margin-left: 0.5rem;
   margin-bottom: 0.2rem;
 }
 
 .toggle {
   background-color: var(--toggle-keypad-background);
-  padding: 0.2rem 0.9rem;
+  padding: 0.25rem 1.3rem;
   border-radius: 0.7rem;
+}
+
+.btn-toggle {
+  background-color: var(--button-danger-bg);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: block;
+  transform: translate(-1rem);
 }
 
 .display {
   background-color: var(--screen-background);
   padding: 1.3rem 1.1rem;
-  color: var(--text);
+  color: var(--text-header);
   font-size: 2rem;
   text-align: end;
   border-radius: 0.6rem;
@@ -109,7 +161,7 @@ header {
   border-radius: 5px;
   background-color: var(--button-orange-bg);
   font-size: 1.4rem;
-  color: var(--text-secondary);
+  color: var(--text-main-btn);
   border-bottom: 0.3rem solid var(--shadow-orange);
 }
 
@@ -131,16 +183,12 @@ header {
 
 .btn-secondary {
   background-color: var(--button-background);
-  color: var(--text);
+  color: var(--text-white);
   border-bottom: 0.3rem solid var(--shadow-secondary);
 }
 
 .btn-danger {
   background-color: var(--button-danger-bg);
-  color: var(--text);
+  color: var(--text-equal-btn);
   border-bottom: 0.3rem solid var(--shadow-danger);
-}
-
-.default-theme {
-  background-color: var(--main-background);
 }
