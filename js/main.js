@@ -132,6 +132,24 @@ btnThird.addEventListener("click", () => {
   }
 });
 
+const btnZero = document.getElementById("btn0");
+btnZero.addEventListener("click", () => {
+  if (display.innerHTML !== "0") {
+    display.innerHTML += "0";
+  } else {
+    display.innerHTML = "0";
+  }
+});
+
+const btnDecimal = document.getElementById("btnDecimal");
+btnDecimal.addEventListener("click", () => {
+  if (display.innerHTML !== "0") {
+    display.innerHTML += ".";
+  } else {
+    display.innerHTML = ".";
+  }
+});
+
 const btnDelete = document.getElementById("btnDel");
 btnDelete.addEventListener("click", () => {
   display.innerHTML = "0";
@@ -144,6 +162,27 @@ btnSum.addEventListener("click", () => {
   currentOperator = "+";
 });
 
+const btnSub = document.getElementById("btnSub");
+btnSub.addEventListener("click", () => {
+  firstGroup = parseInt(display.innerHTML);
+  display.innerHTML = "0";
+  currentOperator = "-";
+});
+
+const btnMul = document.getElementById("btnMul");
+btnMul.addEventListener("click", () => {
+  firstGroup = parseInt(display.innerHTML);
+  display.innerHTML = "0";
+  currentOperator = "*";
+});
+
+const btnDiv = document.getElementById("btnDiv");
+btnDiv.addEventListener("click", () => {
+  firstGroup = parseInt(display.innerHTML);
+  display.innerHTML = "0";
+  currentOperator = "/";
+});
+
 const btnEqual = document.getElementById("btnEqual");
 btnEqual.addEventListener("click", () => {
   secondGroup = parseInt(display.innerHTML);
@@ -152,5 +191,14 @@ btnEqual.addEventListener("click", () => {
     display.innerHTML = firstGroup + secondGroup;
   } else if (currentOperator === "-") {
     display.innerHTML = firstGroup - secondGroup;
+  } else if (currentOperator === "*") {
+    display.innerHTML = firstGroup * secondGroup;
+  } else if (currentOperator === "/") {
+    if (secondGroup === 0) {
+      alert("Division por cero no permitido!");
+      display.innerHTML = 0;
+    } else {
+      display.innerHTML = firstGroup / secondGroup;
+    }
   }
 });
