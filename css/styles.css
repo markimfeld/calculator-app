@@ -9,13 +9,15 @@
   --text-equal-btn: hsl(0, 0%, 100%);
 
   --button-background: hsl(225, 21%, 49%);
+  --button-secondary-hover-bg: hsl(224, 28%, 35%);
   --button-danger-bg: hsl(6, 63%, 50%);
+  --button-danger-hover-bg: hsl(6, 70%, 34%);
   --button-orange-bg: hsl(30, 25%, 89%);
+  --button-orange-hover-bg: hsl(28, 16%, 65%);
 
   --shadow-secondary: hsl(224, 28%, 35%);
   --shadow-danger: hsl(6, 70%, 34%);
   --shadow-orange: hsl(28, 16%, 65%);
-
 }
 
 .second-theme {
@@ -29,12 +31,15 @@
   --text-equal-btn: hsl(0, 0%, 100%);
 
   --button-background: hsl(185, 42%, 37%);
+  --button-secondary-hover-bg: hsl(185, 58%, 25%);
   --button-danger-bg: hsl(25, 98%, 40%);
+  --button-danger-hover-bg: hsl(25, 99%, 27%);
   --button-orange-bg: hsl(45, 7%, 89%);
+  --button-orange-hover-bg: hsl(35, 11%, 61%);
 
   --shadow-secondary: hsl(185, 58%, 25%);
   --shadow-danger: hsl(25, 99%, 27%);
-  --shadow-orange: hsl(35, 11%, 61%);*/
+  --shadow-orange: hsl(35, 11%, 61%);
 }
 
 .third-theme {
@@ -48,8 +53,11 @@
   --text-equal-btn: hsl(198, 20%, 13%);
 
   --button-background: hsl(281, 89%, 26%);
+  --button-secondary-hover-bg: hsl(285, 91%, 52%);
   --button-danger-bg: hsl(176, 100%, 44%);
+  --button-danger-hover-bg: hsl(177, 92%, 70%);
   --button-orange-bg: hsl(268, 47%, 21%);
+  --button-orange-hover-bg: hsl(290, 70%, 36%);
 
   --shadow-secondary: hsl(285, 91%, 52%);
   --shadow-danger: hsl(177, 92%, 70%);
@@ -61,7 +69,6 @@
   margin: 0;
   padding: 0;
   transition: all 200ms;
-  overflow: hidden;
 }
 
 .container {
@@ -181,6 +188,10 @@ header {
   border-bottom: 0.3rem solid var(--shadow-orange);
 }
 
+.btn:hover {
+  background-color: var(--button-orange-hover-bg);
+}
+
 .btn-big {
   width: 90%;
   height: 4rem;
@@ -203,8 +214,16 @@ header {
   border-bottom: 0.3rem solid var(--shadow-secondary);
 }
 
+.btn-secondary:hover {
+  background-color: var(--button-secondary-hover-bg);
+}
+
 .btn-danger {
   background-color: var(--button-danger-bg);
   color: var(--text-equal-btn);
   border-bottom: 0.3rem solid var(--shadow-danger);
+}
+
+.btn-danger:hover {
+  background-color: var(--button-danger-hover-bg);
 }

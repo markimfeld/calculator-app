@@ -152,6 +152,17 @@ btnDecimal.addEventListener("click", () => {
 
 const btnDelete = document.getElementById("btnDel");
 btnDelete.addEventListener("click", () => {
+  display.innerHTML = display.innerHTML.substring(
+    0,
+    display.innerHTML.length - 1
+  );
+  if (display.innerHTML.length === 0) {
+    display.innerHTML = "0";
+  }
+});
+
+const btnReset = document.getElementById("btnReset");
+btnReset.addEventListener("click", () => {
   display.innerHTML = "0";
 });
 
